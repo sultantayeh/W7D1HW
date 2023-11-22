@@ -1,0 +1,36 @@
+#exercise #1
+function getDogs(string, dogNames) {
+    let found = false;
+
+    for (let i = 0; i < dogNames.length; i++) {
+        if (string.includes(dogNames[i])) {
+            if (dogNames[i] === "Sassy") {
+                console.log("That's a damn cat");
+            } else {
+                console.log("Matched " + dogNames[i]);
+                found = true;
+            }
+        }
+    }
+
+    if (!found) {
+        console.log("No Matches");
+    }
+}
+
+let dogNames = ["Fido", "Precious", "Sassy", "Gertrude", "Shadow", "Potato", "Bart"];
+let dogString = "All dogs are good boys. Dogs named Precious can be annoying but are still good. Dogs named Shadow are usually majestic and cool.\
+Sassy is a cat, but Chance is a dog. Can cat people be trusted? I don't know. Also Potato is a great dog name for a lil tiny stubby guy.";
+getDogs(dogString, dogNames);
+
+
+#Exercise #2 
+function replaceIndexes(arr) {
+    for (let i = 0; i < arr.length; i += 2) {
+        arr.splice(i, 1, "even index");
+    }
+}
+
+arr = ["Goku", "Vegeta", "Trunks", "Krillin", "Gohan", "Piccolo"]
+replaceIndexes(arr);
+console.log(arr);
